@@ -1,2 +1,2 @@
 # Different-OJ-solutions
-C, C++, Pyhton
+C, C++, Python
