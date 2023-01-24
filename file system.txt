@@ -1,0 +1,59 @@
+#file system
+* linux follows unix traditions that is why linux uses forward slash
+instead of the back slash like windows.
+* linux also cares about capitalization in file naming
+directories:
+
+/bin  (binary)
+
+/sbin (system binary. this is for administrator usage. general users 
+can't access without permission)
+
+/boot
+(this folder contains everything to boot in)
+
+/dev
+(this is where our devices live 
+this folder contains every information related to disks
+this is typically an area that applications and drivers will access)
+
+/etc
+(this folder stores all of our configuration like package manager, 
+some log files and so on)
+
+/lib
+(libraries are files that application can use to perform various functions
+they are required by bin and sbin)
+
+/media and /mnt or mount
+(all mounted devices like flash drive and other drives such D, F etc are
+found here. some os manages these in dev so it can be found empty)
+
+/opt
+(opt contains all the applications we install manually like chrome)
+
+/proc
+(proc contains all the psudo files or processes running
+for example: cat /proc/cpuinfo  #this will show information of cpu
+cat /proc/uptime #will show the uptime of the pc)
+
+/root
+(root is root user's home directory. if we want to access or edit system
+files we need root permission which is defined here)
+
+/run
+(it's run in ram and everything in it will reset when rebooted or shut down)
+
+/srv
+(service directory that stores different servers like ftp or web servers)
+
+/sys
+(system directory is for connecting with kernal, loads graphics driver and 
+so on and nothing get stored here)
+
+/tmp
+(temporary directory where temporary files stores)
+
+/home
+(each user has it's own home folder and individual informations)
+
