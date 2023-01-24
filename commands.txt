@@ -1,0 +1,47 @@
+#basic commands
+
+ifconfig
+(shows network information like ip address etc)
+
+uname	(username)
+uname -r (more details recursive)
+uname -a (all)
+history
+sudo	(super user do)
+sudo su
+pwd	(print working directory)
+cd	(change or catch directory)
+cd ..
+cd ~	(root directory)
+cd /	(user directory)
+
+ls	(list)
+ll	(long list)
+ls -l	(same as ll)
+ls -R	(list all files in the sub directories)
+ls -a	(shows hidden files in addition to the visible ones)
+ls -lh	(shows the file size in easily readable format)
+
+mkdir	(make directory)
+touch	(creates file)
+rm	(removes file)
+autoremove
+rmdir	(remove directory)
+man <command> (show flag informations)
+cat	(concatenate) read/write file for writting > is used
+cp	(copy one or more file from one directory to another 
+	copy one file to another new file in the same directory)
+mv	(move file to different directory or rename a file)
+	rename: mv old_file.txt new_file.txt
+
+
+
+apt/dnf update
+apt/dnf upgrade
+htop
+ctrl + c
+ctrl + A
+ctrl + E
+nano
+clear
+exit
