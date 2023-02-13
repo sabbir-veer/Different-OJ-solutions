@@ -3,6 +3,7 @@
 ifconfig
 (shows network information like ip address etc)
 
+whoami
 uname	(username)
 uname -r (more details recursive)
 uname -a (all)
@@ -28,20 +29,32 @@ rm	(removes file)
 autoremove
 rmdir	(remove directory)
 man <command> (show flag informations)
+
 cat	(concatenate) read/write file for writting > is used
+* create a file
+cat > filename
+* display contents of a file
+cat filename
+* concatenate files
+cat file1 > file2	
+*appending to a file
+cat >> filename		(will take prompt to append lines)
+cat -n filename		(shows output with line number)
+
 cp	(copy one or more file from one directory to another 
 	copy one file to another new file in the same directory)
 mv	(move file to different directory or rename a file)
 	rename: mv old_file.txt new_file.txt
 
 
-
 apt/dnf update
 apt/dnf upgrade
 htop
-ctrl + c
-ctrl + A
-ctrl + E
-nano
+ctrl + c (cancels or terminate currently running program)
+ctrl + A (move cursor to the beginning of the line)
+ctrl + E (move cursor to the end of the line)
+ctrl + F (move one word forward)
+ctrl + B (move one word backword)
+nano	
 clear
 exit
