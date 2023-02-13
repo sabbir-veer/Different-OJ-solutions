@@ -56,5 +56,6 @@ ctrl + E (move cursor to the end of the line)
 ctrl + F (move one word forward)
 ctrl + B (move one word backword)
 nano	
+wget
 clear
 exit
