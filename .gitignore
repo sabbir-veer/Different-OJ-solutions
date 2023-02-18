@@ -1,2 +1,5 @@
-# *
-# !**/*.cpp
+*.prob
+*.json
+*.exe
+*.o
+*.obj
