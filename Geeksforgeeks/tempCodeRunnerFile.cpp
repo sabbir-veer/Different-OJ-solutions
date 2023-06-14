@@ -1,0 +1,2 @@
+
+        maxSum = curSum;
