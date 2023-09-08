@@ -1,4 +1,4 @@
-// Problem Status: AC/WA/TLE
+// Problem Status: AC
 // #pragma GCC optimize("03")
 #include <bits/stdc++.h>
 using namespace std;
@@ -21,7 +21,7 @@ bool isPrime(int n) {
         return false;
 
     // Check from 2 to n-1
-    for (int i = 2; i <= n / 2; i++)
+    for (int i = 2; i * i <= n; i++)
         if (n % i == 0)
             return false;
 
@@ -30,13 +30,12 @@ bool isPrime(int n) {
 void solve() {
     int l, r;
     cin >> l >> r;
-    // watch*
     int even = (r & 1) ? r - 1 : r;
     int a = 2, b = even - 2;
 
     if (l == r and l & 1) {
-        for (int i = l - 1; i >= l / 2; i--) {
-            if (__gcd(i, l - i) != 1) {
+        for (int i = 3; i * i <= l; i += 2) {
+            if (l % i == 0) {
                 a = i, b = l - i;
                 break;
             }
@@ -56,6 +55,5 @@ int32_t main() {
     while (tc--) {
         solve();
     }
-
     return 0;
 }

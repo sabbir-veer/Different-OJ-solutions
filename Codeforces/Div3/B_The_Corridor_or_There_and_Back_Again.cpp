@@ -1,4 +1,4 @@
-// Problem Status: AC/WA/TLE
+// Problem Status: AC
 // #pragma GCC optimize("03")
 #include <bits/stdc++.h>
 using namespace std;
