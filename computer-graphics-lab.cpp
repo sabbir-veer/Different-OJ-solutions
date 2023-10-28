@@ -12,7 +12,7 @@ gcc -o graphics graphics.cpp /usr/lib/libXbgi.a -lX11 -lm
 ./graphics
 
 last modified: 28 oct, 2023
-prepared by: sabbir ahmed
+prepared by: Sabbir Ahmed
 */
 
 /* DDA line drawing*/
