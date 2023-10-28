@@ -193,6 +193,90 @@ int main() {
     return 0;
 }
 
+/* Shearing object in x axis and y axis*/
+#include <graphics.h>
+#include <stdio.h>
+
+void drawTriangle(int x1, int y1, int x2, int y2, int x3, int y3) {
+    line(x1, y1, x2, y2);
+    line(x2, y2, x3, y3);
+    line(x3, y3, x1, y1);
+}
+
+void shearTriangle(int x1, int y1, int x2, int y2, int x3, int y3, float shearFactor, char axis) {
+    int x1_new, y1_new, x2_new, y2_new, x3_new, y3_new;
+
+    if (axis == 'X' || axis == 'x') {
+        x1_new = x1 + shearFactor * y1;
+        x2_new = x2 + shearFactor * y2;
+        x3_new = x3 + shearFactor * y3;
+        y1_new = y1;
+        y2_new = y2;
+        y3_new = y3;
+    } else if (axis == 'Y' || axis == 'y') {
+        x1_new = x1;
+        x2_new = x2;
+        x3_new = x3;
+        y1_new = y1 + shearFactor * x1;
+        y2_new = y2 + shearFactor * x2;
+        y3_new = y3 + shearFactor * x3;
+    }
+
+    drawTriangle(x1_new, y1_new, x2_new, y2_new, x3_new, y3_new);
+}
+
+int main(int argc, char const *argv[]) {
+    int x1 = 2, y1 = 3;
+    int x2 = 3, y2 = 5;
+    int x3 = 5, y3 = 7;
+
+    float shearFactor;
+    char axis;
+
+    drawTriangle(x1, y1, x2, y2, x3, y3);
+
+    printf("Enter shearing factor: ");
+    scanf("%f", &shearFactor);
+
+    printf("Shear along X or Y axis (Enter 'X' or 'Y'): ");
+    scanf(" %c", &axis);
+
+    int gd = DETECT, gm;
+    initgraph(&gd, &gm, (char *)"");
+    shearTriangle(x1, y1, x2, y2, x3, y3, shearFactor, axis);
+
+    getch();
+    closegraph();
+    return 0;
+}
+
+/* Window to Viewport Transformation*/
+#include <iostream>
+using namespace std;
+void WindowtoViewport(int x_w, int y_w, int x_wmax, int y_wmax, int x_wmin, int y_wmin, int x_vmax, int y_vmax, int x_vmin, int y_vmin) {
+    int x_v, y_v;
+
+    float sx, sy;
+
+    sx = (float)(x_vmax - x_vmin) / (x_wmax - x_wmin);
+    sy = (float)(y_vmax - y_vmin) / (y_wmax - y_wmin);
+
+    x_v = x_vmin + (float)((x_w - x_wmin) * sx);
+    y_v = y_vmin + (float)((y_w - y_wmin) * sy);
+
+    cout << "The point on viewport: (" << x_v << "," << y_v << ")" << endl;
+}
+
+int main() {
+    int x_wmax = 80, y_wmax = 80, x_wmin = 20, y_wmin = 40;
+
+    int x_vmax = 60, y_vmax = 60, x_vmin = 30, y_vmin = 40;
+
+    int x_w = 30, y_w = 80;
+
+    WindowtoViewport(30, 80, 80, 80, 20, 40, 60, 60, 30, 40);
+}
+
 /* DDA line drawing*/
 #include <graphics.h>
 #include <math.h>
