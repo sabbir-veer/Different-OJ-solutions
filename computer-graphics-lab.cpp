@@ -151,18 +151,13 @@ int main() {
     int y2 = 200, y3 = 100;
 
     initgraph(&gd, &gm, (char *)"");
-    // cleardevice();
 
     // Draw the graph
-    line(getmaxx() / 2, 0, getmaxx() / 2,
-         getmaxy());
-    line(0, getmaxy() / 2, getmaxx(),
-         getmaxy() / 2);
+    line(getmaxx() / 2, 0, getmaxx() / 2, getmaxy());
+    line(0, getmaxy() / 2, getmaxx(), getmaxy() / 2);
 
     // Object initially at 2nd quadrant
-    printf(
-        "Before Reflection Object"
-        " in 2nd Quadrant");
+    printf("Before Reflection Object in 2nd Quadrant");
 
     // Set the color
     setcolor(14);
@@ -174,37 +169,23 @@ int main() {
     // After reflection
     printf("\nAfter Reflection");
 
-    // Reflection along origin i.e.,
-    // in 4th quadrant
+    // Reflection along origin i.e., in 4th quadrant
     setcolor(4);
-    line(getmaxx() - x1, getmaxy() - y1,
-         getmaxx() - x2, getmaxy() - y2);
+    line(getmaxx() - x1, getmaxy() - y1, getmaxx() - x2, getmaxy() - y2);
+    line(getmaxx() - x2, getmaxy() - y2, getmaxx() - x3, getmaxy() - y3);
+    line(getmaxx() - x3, getmaxy() - y3, getmaxx() - x1, getmaxy() - y1);
 
-    line(getmaxx() - x2, getmaxy() - y2,
-         getmaxx() - x3, getmaxy() - y3);
-
-    line(getmaxx() - x3, getmaxy() - y3,
-         getmaxx() - x1, getmaxy() - y1);
-
-    // Reflection along x-axis i.e.,
-    // in 1st quadrant
+    // Reflection along x-axis i.e., in 1st quadrant
     setcolor(3);
-    line(getmaxx() - x1, y1,
-         getmaxx() - x2, y2);
-    line(getmaxx() - x2, y2,
-         getmaxx() - x3, y3);
-    line(getmaxx() - x3, y3,
-         getmaxx() - x1, y1);
+    line(getmaxx() - x1, y1, getmaxx() - x2, y2);
+    line(getmaxx() - x2, y2, getmaxx() - x3, y3);
+    line(getmaxx() - x3, y3, getmaxx() - x1, y1);
 
-    // Reflection along y-axis i.e.,
-    // in 3rd quadrant
+    // Reflection along y-axis i.e., in 3rd quadrant
     setcolor(2);
-    line(x1, getmaxy() - y1, x2,
-         getmaxy() - y2);
-    line(x2, getmaxy() - y2, x3,
-         getmaxy() - y3);
-    line(x3, getmaxy() - y3, x1,
-         getmaxy() - y1);
+    line(x1, getmaxy() - y1, x2, getmaxy() - y2);
+    line(x2, getmaxy() - y2, x3, getmaxy() - y3);
+    line(x3, getmaxy() - y3, x1, getmaxy() - y1);
     getch();
 
     closegraph();
